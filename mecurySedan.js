@@ -1,5 +1,5 @@
 //this includes the vehicle class as a module
-const VehicleModule = require("./vehicleBaseClass")
+const VehicleModule = require("./vehicleBaseClass.js")
 
 //this shows how to call from this module...
 let v = new VehicleModule.Vehicle("Mecury", "Sedan", "1965", "color", "mileage");
@@ -9,13 +9,14 @@ import { Vehicle } from "./vehicleBaseClass.js";
 
 
 class Car extends Vehicle {
-    constructor(make, model, year, color, mileage) {
-        this.maxPassenger = 6;
-        this.passenger = 0;
-        this.numberOfWheels = 4;
-        this.maximumSpeed = 200;
-        this.fuel = 100
-        this.scheduleService = false;
+    constructor() {
+        super (make, model, year, color, mileage);
+        maxPassenger = 6;
+        passenger = 0;
+        numberOfWheels = 4;
+        maximumSpeed = 200;
+        fuel = 100
+        scheduleService = false;
     }
 }
 
@@ -31,6 +32,8 @@ loadPassenger(num){
         console.log("Too many passengers in car")
     }
 }
+    
+
 start(){
     if (this.fuel > 0) {
         start = true;
